@@ -3,7 +3,7 @@ All files are located in ./file_sistem
 
 ##### install
 download the app from the GitHub to folder which you choiced
-	Use: git clone 
+	Use: git clone https://github.com/GreenHouseControllers/GH-database.git
 Then db is ready for work.
 
 To start app open the terminal in the root of the database
