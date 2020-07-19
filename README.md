@@ -8,7 +8,7 @@ Then db is ready for work.
 
 To start app open the terminal in the root of the database
 	and use command: npm start
-Use our npm module to work with db.
+Use our npm module to work with db. https://github.com/GreenHouseControllers/gh-db
 ##### More about it: 
 
 If you can't, or don't want to use our npm module, below will be info for you.
