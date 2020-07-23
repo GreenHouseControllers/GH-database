@@ -2,8 +2,11 @@ This app gives you possibility to work with your files out of your app.
 All files are located in ./file_sistem
 
 ##### install
-download the app from the GitHub to folder which you choiced
+1. download the app from the GitHub to folder which you choiced
 	Use: git clone https://github.com/GreenHouseControllers/GH-database.git
+2. change port in './config/config.json',
+default port is 7202.
+
 Then db is ready for work.
 
 To start app open the terminal in the root of the database

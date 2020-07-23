@@ -10,7 +10,7 @@ const writeFile = require('../functions/writeFile');
 const readJson = require('../functions/readJson');
 
 module.exports = {
-    async df(req, res){
+     df(req, res){
         try {
             let method = req.body.method;
             let name = req.body.name;
