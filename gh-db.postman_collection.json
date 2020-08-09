@@ -1,0 +1,642 @@
+{
+	"info": {
+		"_postman_id": "f5945813-6aeb-4722-9366-519073e39860",
+		"name": "gh-db",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "collection",
+			"item": [
+				{
+					"name": "crud",
+					"item": [
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"method\": \"create\",\n    \"name\": \"newCollection\",\n    \"data\": {\n        \"name\": \"jack\",\n        \"age\": 15\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:7202/api/collection",
+									"host": [
+										"localhost"
+									],
+									"port": "7202",
+									"path": [
+										"api",
+										"collection"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "read",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"method\": \"read\",\n    \"name\": \"newCollection\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:7202/api/collection",
+									"host": [
+										"localhost"
+									],
+									"port": "7202",
+									"path": [
+										"api",
+										"collection"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"method\": \"update\",\n    \"name\": \"newCollection\",\n    \"key\": \"name\",\n    \"data\": \"jony\",\n    \"newData\": {\n        \"name\": \"jack\",\n        \"ege\": 15\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:7202/api/collection",
+									"host": [
+										"localhost"
+									],
+									"port": "7202",
+									"path": [
+										"api",
+										"collection"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"method\": \"delete\",\n    \"name\": \"newCollection\",\n    \"key\": \"name\",\n    \"data\": \"jony\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:7202/api/collection",
+									"host": [
+										"localhost"
+									],
+									"port": "7202",
+									"path": [
+										"api",
+										"collection"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "More methods",
+					"item": [
+						{
+							"name": "get",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"method\": \"get\",\n    \"name\": \"newCollection\",\n    \"key\": \"name\",\n    \"data\": \"jack\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:7202/api/collection",
+									"host": [
+										"localhost"
+									],
+									"port": "7202",
+									"path": [
+										"api",
+										"collection"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "createCollection",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"method\": \"createCollection\",\n    \"name\": \"newCollection\",\n    \"path\": \"newCollection.json\",\n    \"fileName\": \"newCollection.json\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7202/api/collection",
+							"host": [
+								"localhost"
+							],
+							"port": "7202",
+							"path": [
+								"api",
+								"collection"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "removeCollection ",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"method\": \"removeCollection\",\n    \"name\": \"newCollection\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7202/api/collection",
+							"host": [
+								"localhost"
+							],
+							"port": "7202",
+							"path": [
+								"api",
+								"collection"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "dirFile",
+			"item": [
+				{
+					"name": "dir",
+					"item": [
+						{
+							"name": "createDir",
+							"request": {
+								"auth": {
+									"type": "bearer"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "x-access-token",
+										"value": "11111",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"method\": \"createDir\",\n    \"path\": \"\",\n    \"name\": \"exemple\"\n}"
+								},
+								"url": {
+									"raw": "localhost:7202/api/fs/df",
+									"host": [
+										"localhost"
+									],
+									"port": "7202",
+									"path": [
+										"api",
+										"fs",
+										"df"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "removeDir",
+							"request": {
+								"auth": {
+									"type": "bearer"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "x-access-token",
+										"type": "text",
+										"value": "11111",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"method\": \"removeDir\",\n    \"path\": \"\",\n    \"name\": \"exemple\"\n}"
+								},
+								"url": {
+									"raw": "localhost:7202/api/fs/df",
+									"host": [
+										"localhost"
+									],
+									"port": "7202",
+									"path": [
+										"api",
+										"fs",
+										"df"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "file",
+					"item": [
+						{
+							"name": "createFile",
+							"request": {
+								"auth": {
+									"type": "bearer"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "x-access-token",
+										"type": "text",
+										"value": "11111",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"method\": \"createFile\",\n    \"path\": \"exemple\",\n    \"name\": \"exemple.json\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:7202/api/fs/df",
+									"host": [
+										"localhost"
+									],
+									"port": "7202",
+									"path": [
+										"api",
+										"fs",
+										"df"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "removeFile",
+							"request": {
+								"auth": {
+									"type": "bearer"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "x-access-token",
+										"type": "text",
+										"value": "11111",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"method\": \"removeFile\",\n    \"path\": \"exemple\",\n    \"name\": \"exemple.json\"\n}"
+								},
+								"url": {
+									"raw": "localhost:7202/api/fs/df",
+									"host": [
+										"localhost"
+									],
+									"port": "7202",
+									"path": [
+										"api",
+										"fs",
+										"df"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "readFile",
+							"request": {
+								"auth": {
+									"type": "bearer"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "x-access-token",
+										"type": "text",
+										"value": "11111",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"method\": \"readFile\",\n    \"path\": \"exemple\",\n    \"name\": \"exemple.txt\"\n}"
+								},
+								"url": {
+									"raw": "localhost:7202/api/fs/df",
+									"host": [
+										"localhost"
+									],
+									"port": "7202",
+									"path": [
+										"api",
+										"fs",
+										"df"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "writeFile",
+							"request": {
+								"auth": {
+									"type": "bearer"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"name": "Content-Type",
+										"type": "text",
+										"value": "application/json"
+									},
+									{
+										"key": "x-access-token",
+										"type": "text",
+										"value": "11111",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"method\": \"writeFile\",\n    \"path\": \"exemple\",\n    \"name\": \"exemple.txt\",\n    \"data\": \"Hallo World ! ! !\"\n}"
+								},
+								"url": {
+									"raw": "localhost:7202/api/fs/df",
+									"host": [
+										"localhost"
+									],
+									"port": "7202",
+									"path": [
+										"api",
+										"fs",
+										"df"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "json",
+			"item": [
+				{
+					"name": "readJson",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"method\": \"readJson\",\n    \"path\": \"exemple\",\n    \"name\": \"exemple.json\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7202/api/fs/json",
+							"host": [
+								"localhost"
+							],
+							"port": "7202",
+							"path": [
+								"api",
+								"fs",
+								"json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getElement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"method\": \"getElement\",\n    \"path\": \"exemple\",\n    \"name\": \"exemple.json\",\n    \"data\": \"name\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7202/api/fs/json",
+							"host": [
+								"localhost"
+							],
+							"port": "7202",
+							"path": [
+								"api",
+								"fs",
+								"json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "pushElement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"method\": \"pushElement\",\n    \"path\": \"exemple\",\n    \"name\": \"exemple.json\",\n    \"data\": \"newElement\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7202/api/fs/json",
+							"host": [
+								"localhost"
+							],
+							"port": "7202",
+							"path": [
+								"api",
+								"fs",
+								"json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteElement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"method\": \"deleteElement\",\n    \"path\": \"exemple\",\n    \"name\": \"exemple.json\",\n    \"data\": \"name\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7202/api/fs/json",
+							"host": [
+								"localhost"
+							],
+							"port": "7202",
+							"path": [
+								"api",
+								"fs",
+								"json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "writeJson",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"method\": \"writeJson\",\n  \"path\": \"exemple\",\n  \"name\": \"exemple.json\",\n  \"data\": {\n    \"name\": \"jony\",\n    \"age\": \"26\"\n  }\n}\n\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:7202/api/fs/json",
+							"host": [
+								"localhost"
+							],
+							"port": "7202",
+							"path": [
+								"api",
+								"fs",
+								"json"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

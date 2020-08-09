@@ -3,7 +3,7 @@
 This app gives you possibility to work with your files out of your app.
 All files are located in ./file_sistem
 
-### install
+## install
 1. download the app from the GitHub to folder which you choiced
     Use: git clone https://github.com/GreenHouseControllers/GH-database.git
 2. change port in './config/config.json',
@@ -12,11 +12,7 @@ default port is 7202.
 Then db is ready for work.
 
 To start app open the terminal in the root of the database
-
-and use command: 
-
-        npm start
-        
+    and use command: npm start
 Use our npm module to work with db. https://github.com/GreenHouseControllers/gh-db
 or use:
     
@@ -27,30 +23,44 @@ or: https://github.com/GreenHouseControllers/gh-db
 
 If you don't want to use our npm module - looking for next part of the text.
 
-### usage
-#### Methods dirFile
-1. readFile - read file and return its contents.
+## usage
+### Methods dirFile
+1. readFile - getElement file and return its contents.
 2. createFile - create file and return message or error.
 3. removeFile - remove file and return message or error.
 4. createDir - create folder and return message or error.
 5. removeDir - remove folder and return message or error.
 6. writeFile - write data to file and return message or error. 
 
-#### Methods json
-1. readJson - read and parse json file and return its contents.
+### Methods json
+1. readJson - getElement and parse json file and return its contents.
 2. writeJson - write json file and return message.
 3. getElement - return element from array in json file.
-4. pushElement - push element to the end of array in json file. 
-5. deleteElement - deleteElement from array in json file.
+4. push - push element to the end of array in json file. 
 
-#### URL
-This db has got 2 urls - for working with file sistem and with json filesand arrays.
+### Methods collection
+**main**
+1. createCollection - create collection and return message.
+2. removeCollection - remove collection and return message.
+
+**CRUD**
+1. create - add object and return message.
+2. read - read collection and return its content.
+3. update - delete object, add new object and return message.
+4. delete - delete object and return message.
+
+**more methods**
+1. get - get object by key and value.
+
+### URL
+This db has got 3 urls - for working with filesystem, json files and with collections to sand requests.
 1. localhost:7202/api/fs/df
-2. localhost:7202/api/fs/json
+2. localhost:7202/api/fs/json 
+3. localhost:7202/api/collection   
 
 Port will automatically change to that one, which you chose.
 
-#### request to db
+### request to db
  Use localhost:7202/api/fs/df with requests with dirFile methods.
  To send request with all method except writeFile us have to send:
     
@@ -69,7 +79,8 @@ To send request with writeFile you have to use one more parameter - data.
         "data": "SOME TEXT"
     }
     
-To send request with json methods, you have to send:
+Use localhost:7202/api/fs/json to send request with json methods.
+##### arrays
 
 1. readJson:
 
@@ -106,17 +117,113 @@ To send request with json methods, you have to send:
             "data": "new_element"
         }
         
-5. deleteElement
+### collections
+
+To send requests with collection methods use: localhost:7202/api/collection    
+        
+1. createCollection:
 
         {
-              "method": "deleteElement",
-              "path": "exemple",
-              "name": "exemple.json",
-              "data": "element"          
+            "method": "createCollection",
+            "name": "newCollection",
+            "path": "./collections/newCollection.json",
+            "fileName": "newCollection.json"
+        }
+
+2. removeCollection:
+
+        {
+            "method": "removeCollection",
+            "name": "newCollection"
+        }
+
+### CRUD
+    
+1. create:
+        
+        {
+            "method": "create",
+            "name": "newCollection",
+            "data": {
+                "name": "jack",
+                "age": 15
+            }
         }
         
+##### or
+
+        {
+            "method": "create",
+            "name": "newCollection",
+            "data": data
+        }
+        
+2. read:
+
+        {
+            "method": "read",
+            "name": "newCollection"
+        }
+        
+3. update:
+
+        {
+            "method": "update",
+            "name": "newCollection",
+            "key": "name",
+            "data": "jony",
+            "newData": {
+                "name": "jack",
+                "ege": 15
+            }
+        }
+    
+##### or
+
+        {
+            "method": "update",
+            "name": "newCollection",
+            "key": "name",
+            "data": "jony",
+            "newData": newData
+        }
+
+here data is value of object with key 'name'.
+
+4. delete:
+
+        {
+            "method": "delete",
+            "name": "newCollection",
+            "key": "name",
+            "data": "jony"
+        }
+
+### more methods for collection
+
+get:
+        
+        {
+            "method": "get",
+            "name": "newCollection",
+            "key": "name",
+            "data": "jack"
+        }           
+        
+This method returns you one object from the collection.
+
+**If you have many objects with the same value with a same key, it will return you the first one**
+        
+### Creating collections with the Postman
+
+Postman collection for working with db lokated at: ./gh-db.postman_collection.json
+Import collection.
+Use requests createCollection for create and removeCollection for remove.
+        
+## errors
+        
 All methods can return you errors.
-if you got message like 'Can not read file' and error, look for errors of the fs.
+if you got message like 'Can not getElement file' and error, look for errors of the fs.
 
 ### exemple of err:
 
@@ -131,3 +238,4 @@ if you got message like 'Can not read file' and error, look for errors of the fs
     }
 
 
+  

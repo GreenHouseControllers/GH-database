@@ -1,12 +1,13 @@
 //json functions
-const getElement = require('../function_json/getElement');
-const readJson = require('../function_json/readJson');
-const writeJson = require('../function_json/writeJson');
-const pushElement = require('../function_json/pushElement');
-const deleteElement = require('../function_json/deleteElement');
+const getElement = require('../../function_json/getElement');
+const readJson = require('../../function_json/readJson');
+const writeJson = require('../../function_json/writeJson');
+const pushElement = require('../../function_json/pushElement');
+const deleteElement = require('../../function_json/deleteElement');
 
-
+// json
 const json = function (method, name, path, data) {
+// choose method
     if (method == 'getElement'){
         let answer = getElement(path, name, data);
         return answer;
@@ -28,5 +29,5 @@ const json = function (method, name, path, data) {
         return answer;
     }
 }
-
+//exports
 module.exports = json;

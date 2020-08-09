@@ -1,8 +1,10 @@
+// add modules
 const fs = require('fs');
 const path = require('path');
 
 let readFile = function (dirPath, name) {
     try {
+//read file
         let file = fs.readFileSync(path.join(__dirname, '../file_sistem', dirPath, name), 'utf8');
             return(file);
     }
@@ -13,5 +15,5 @@ let readFile = function (dirPath, name) {
         });
     }
 }
-
+//exports
 module.exports = readFile;

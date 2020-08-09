@@ -1,13 +1,14 @@
-//functions_df
-const createDir = require('../functions_df/createDir');
-const removeDir = require('../functions_df/removeDir');
-const createFile = require('../functions_df/createFile');
-const removeFile = require('../functions_df/removeFile');
-const readFile = require('../functions_df/readFile');
-const writeFile = require('../functions_df/writeFile');
-const readJson = require('../function_json/readJson');
+// functions_df
+const createDir = require('../../functions_df/createDir');
+const removeDir = require('../../functions_df/removeDir');
+const createFile = require('../../functions_df/createFile');
+const removeFile = require('../../functions_df/removeFile');
+const readFile = require('../../functions_df/readFile');
+const writeFile = require('../../functions_df/writeFile');
 
+// dirFile
 const dirFile = function (method, name, path, data) {
+// choose method
     if(method == 'createDir'){
         let answer = createDir(path, name);
         return answer;
@@ -33,5 +34,5 @@ const dirFile = function (method, name, path, data) {
         return answer;
     }
 }
-
+// exports
 module.exports = dirFile;

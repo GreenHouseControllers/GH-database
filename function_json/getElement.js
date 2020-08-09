@@ -1,10 +1,13 @@
+// add modules
 const fs = require('fs');
 const path = require('path');
 
-let readJson = function (dirPath, name, key) {
+let getElement = function (dirPath, name, key) {
     try {
+// read and parse file
         let file = fs.readFileSync(path.join(__dirname, '../file_sistem', dirPath, name), 'utf8');
         let parsedFile = JSON.parse(file);
+// get element
         let returnElement = parsedFile[key];
         return(returnElement);
     }
@@ -15,5 +18,5 @@ let readJson = function (dirPath, name, key) {
         });
     }
 }
-
-module.exports = readJson;
+//exports
+module.exports = getElement;

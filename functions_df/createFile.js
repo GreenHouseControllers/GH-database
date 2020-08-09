@@ -1,8 +1,10 @@
+// add modules
 const fs = require('fs');
 const path = require('path');
 
 let createFile = function (dirPath, name) {
     try {
+// create file
         fs.openSync(path.join(__dirname, '../file_sistem', dirPath, name), 'w');
         return ("fie has been created");
     }
@@ -13,5 +15,5 @@ let createFile = function (dirPath, name) {
         });
     }
 }
-
+//exports
 module.exports = createFile;

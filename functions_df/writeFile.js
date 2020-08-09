@@ -1,8 +1,10 @@
+// add modules
 const fs = require('fs');
 const path = require('path');
 
 let writeFile = function (dirPath, name, data) {
     try {
+// write file
         fs.writeFileSync(path.join(__dirname, '../file_sistem', dirPath, name), data);
         return ("file has been wrote");
     }
@@ -13,5 +15,5 @@ let writeFile = function (dirPath, name, data) {
         });
     }
 }
-
+//exports
 module.exports = writeFile;
