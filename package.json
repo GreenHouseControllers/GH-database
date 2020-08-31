@@ -1,12 +1,13 @@
 {
   "name": "gh-db",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "This app gives you possibility to work with your files out of your app",
   "main": "main.js",
   "dependencies": {
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
+    "gh-config": "^1.0.2",
     "gh-get-config": "^1.0.1",
     "path": "^0.12.7"
   },
@@ -19,5 +20,13 @@
     "url": "https://github.com/GreenHouseControllers/GH-database.git"
   },
   "author": "Strizhkov Glab",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "db",
+    "database",
+    "ghc-db",
+    "gh-db",
+    "Back-end",
+    "npm"
+  ]
 }

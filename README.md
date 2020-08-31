@@ -1,4 +1,4 @@
-# GH-database
+# GH-database 1.3.0
 
 This app gives you possibility to work with your files out of your app.
 All files are located in ./file_sistem
@@ -8,6 +8,8 @@ All files are located in ./file_sistem
     Use: git clone https://github.com/GreenHouseControllers/GH-database.git
 2. change port in './config/config.json',
 default port is 7202.
+3. change token in './config/config.json' , key - "dbToken",
+default token is "t111"
 
 Then db is ready for work.
 
@@ -24,6 +26,23 @@ or: https://github.com/GreenHouseControllers/gh-db
 If you don't want to use our npm module - looking for next part of the text.
 
 ## usage
+
+### connect with db
+You have to do connect before work with db.
+To do connect you have to send request with token.
+
+    {
+        token: "TOKEN"
+    }
+    
+### connect with db
+You have to do connect before work with db.
+To do connect you have to send request with token.
+
+    {
+        token: "TOKEN"
+    }
+    
 ### Methods dirFile
 1. readFile - getElement file and return its contents.
 2. createFile - create file and return message or error.
@@ -53,7 +72,8 @@ If you don't want to use our npm module - looking for next part of the text.
 1. get - get object by key and value.
 
 ### URL
-This db has got 3 urls - for working with filesystem, json files and with collections to sand requests.
+This db has got 3 urls - for connecting, working with filesystem, json files and with collections to sand requests.
+1. localhost:7202/connect/app
 1. localhost:7202/api/fs/df
 2. localhost:7202/api/fs/json 
 3. localhost:7202/api/collection   
