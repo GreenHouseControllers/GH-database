@@ -1,14 +1,19 @@
 {
   "name": "gh-db",
-  "version": "1.3.1",
+  "version": "2.0.0",
   "description": "This app gives you possibility to work with your files out of your app",
   "main": "main.js",
   "dependencies": {
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "fs": "0.0.1-security",
     "gh-config": "^1.0.2",
     "gh-get-config": "^1.0.1",
+    "gh-logger": "^1.0.1",
+    "gh-user-nav": "^1.0.1",
+    "moment": "^2.29.1",
+    "multer": "^1.4.2",
     "path": "^0.12.7"
   },
   "devDependencies": {},
